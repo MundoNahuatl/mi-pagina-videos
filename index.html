@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Video protegido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <img src="imagenes/logo master 2.png" alt="Logo izquierdo" id="logo-izquierdo">
+<img src="imagenes/logo master 2.png" alt="Logo derecho" id="logo-derecho">
+
+
+  <h1>BIENVENIDO A MUNDO NAHUAT</h1>
+  <h2>APRENDE NAHUAT</h2>
+
+  <div id="password-container">
+    <p>Introduce la contraseña para ver el video:</p>
+    <input type="password" id="password" placeholder="Contraseña">
+    <button onclick="verificarContrasena()">ENTRAR</button>
+    <p id="mensaje" style="color: red;"></p>
+  </div>
+
+  <div id="video-container" style="display: none; margin-top: 20px;">
+    <iframe 
+      src="https://player.vimeo.com/video/1086597126?h=384994588e" 
+      width="960" height="540"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <script>
+    function verificarContrasena() {
+      const passwordIngresada = document.getElementById("password").value;
+      const passwordCorrecta = "pedo"; // ← Cambia esto por tu contraseña
+
+      if (passwordIngresada === passwordCorrecta) {
+        document.getElementById("password-container").style.display = "none";
+        document.getElementById("video-container").style.display = "block";
+      } else {
+        document.getElementById("mensaje").textContent = "Contraseña incorrecta";
+      }
+    }
+  </script>
+</body>
+</html>

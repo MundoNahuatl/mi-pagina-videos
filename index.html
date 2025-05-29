@@ -15,7 +15,7 @@
 
   <div id="password-container">
     <p>Introduce la contraseña para ver el video:</p>
-    <input type="password" id="password" placeholder="Contraseña" onkeypress="if(event.key === 'Enter') verificarContrasena()">
+    <input type="password" id="password" placeholder="Contraseña">
     <button onclick="verificarContrasena()">ENTRAR</button>
     <p id="mensaje" style="color: red;"></p>
   </div>
@@ -42,6 +42,16 @@
         document.getElementById("mensaje").textContent = "Contraseña incorrecta";
       }
     }
-  </script>
+// Espera a que cargue el DOM antes de asignar eventos
+  document.addEventListener("DOMContentLoaded", function () {
+    const inputPassword = document.getElementById("password");
+
+    inputPassword.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        verificarContrasena();
+      }
+    });
+  });
+</script>
 </body>
 </html>

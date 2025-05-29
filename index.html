@@ -15,7 +15,7 @@
 
   <div id="password-container">
     <p>Introduce la contraseña para ver el video:</p>
-    <input type="password" id="password" placeholder="Contraseña">
+    <input type="password" id="password" placeholder="Contraseña" onkeypress="if(event.key === 'Enter') verificarContrasena()">
     <button onclick="verificarContrasena()">ENTRAR</button>
     <p id="mensaje" style="color: red;"></p>
   </div>

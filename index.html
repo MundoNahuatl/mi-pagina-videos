@@ -42,16 +42,6 @@
         document.getElementById("mensaje").textContent = "Contraseña incorrecta";
       }
     }
-// Espera a que cargue el DOM antes de asignar eventos
-  document.addEventListener("DOMContentLoaded", function () {
-    const inputPassword = document.getElementById("password");
-
-    inputPassword.addEventListener("keydown", function (event) {
-      if (event.key === "Enter") {
-        verificarContrasena();
-      }
-    });
-  });
 </script>
 </body>
 </html>

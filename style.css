@@ -38,4 +38,37 @@ iframe {
   width: 150px;
   z-index: 9999;
 }
+/* Centrar el contenido del contenedor del formulario */
+#formulario-container {
+  text-align: center;
+}
 
+iframe {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  .btn-continuar {
+    font-size: 18px;
+    padding: 16px 24px;
+    width: 90%;
+  }
+
+  #logo-izquierdo, #logo-derecho {
+    width: 80px;
+  }
+}
+body {
+  margin: 0;
+  padding: 0 10px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}

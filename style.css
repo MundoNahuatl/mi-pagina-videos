@@ -38,6 +38,26 @@ iframe {
   width: 150px;
   z-index: 9999;
 }
+
+/* Estilo para el botón CONTINUAR */
+.btn-continuar {
+  padding: 20px 40px;
+  font-size: 24px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-continuar:hover {
+  background-color: #333333;
+  transform: scale(1.05);
+}
+
 /* Centrar el contenido del contenedor del formulario */
 #formulario-container {
   text-align: center;
